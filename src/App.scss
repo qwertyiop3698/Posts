@@ -1,0 +1,222 @@
+$bg-color: #F8F9FD;
+$main-purple: #A29BFE;
+$sub-blue: #B3E5FC;
+$white: #ffffff;
+$text-dark: #4d4d4d;
+$text-gray: #888888;
+
+.App {
+  background-color: $bg-color;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Pretendard', sans-serif; 
+
+  .app-header {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  h1 {
+    color: $main-purple;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+    
+    &:hover { color: darken($main-purple, 10%); }
+  }
+
+  .auth-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $text-dark;
+    font-weight: 700;
+    white-space: nowrap;
+
+    button {
+      margin: 0;
+    }
+  }
+
+  hr {
+    width: 100%;
+    max-width: 600px;
+    border: 0;
+    height: 1px;
+    background: lighten($main-purple, 20%);
+    margin-bottom: 30px;
+  }
+
+  .list-container {
+    width: 100%;
+    max-width: 600px;
+
+    .post-card {
+      background: $white;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba($main-purple, 0.08);
+      transition: all 0.3s ease;
+      color: $text-dark;
+      font-weight: 600;
+
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba($main-purple, 0.15);
+        border-color: $sub-blue;
+      }
+    }
+  }
+
+
+  button {
+    background-color: $sub-blue;
+    color: darken($text-dark, 10%);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+    margin: 5px;
+
+    &:hover { background-color: darken($sub-blue, 5%); }
+
+    &[onClick*="save"], &[onClick*="update"] { // 저장/수정 버튼은 보라색으로!
+      background-color: $main-purple;
+      color: white;
+      &:hover { background-color: darken($main-purple, 10%); }
+    }
+  }
+
+ 
+  .form-container {
+    background: $white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+
+    .form-input, .form-textarea {
+      width: 100%;
+      border: 2px solid $bg-color;
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 15px;
+      outline: none;
+      transition: border-color 0.3s;
+
+      &:focus { border-color: $main-purple; }
+    }
+    .form-textarea {
+      height: 40vh;
+    }
+
+    .form-fileuploads{
+      background-color: aqua;
+    }
+  }
+
+  .auth-form {
+    h2 {
+      margin-top: 0;
+      color: $text-dark;
+    }
+  }
+
+  .post-item { display: flex; justify-content: space-between; }
+
+  .detail-container {
+    @extend .form-container; 
+    
+    .detail-image{
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      margin: 15px auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      object-fit: contain;
+      transition: transform 0.3s ease;
+
+      &:hover{
+        transform: scale(1.02);
+      }
+
+      small{
+        display: block;
+        text-align: right;
+        color: #888;
+        margin-top: 10px;
+      }
+    }
+
+    h2{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    .detail-views{
+      font-size: 0.9rem;
+      font-weight: normal;
+      color: $text-gray;
+      }
+    }
+
+    .detail-write-comment{
+      display: flex;
+      align-items: stretch;
+      gap: 10px;
+      margin-top: 30px;
+      width: 100%;
+
+      textarea{
+        flex: 1;
+        height: 80px;
+        padding: 12px;
+        border: 2px solid $sub-blue;
+        border-radius: 12px;
+        resize: none;
+        outline: none;
+        transition: all 0.3s;
+
+        &:focus{
+          border-color: $main-purple;
+          box-shadow: 0 0 8px rgba($main-purple, 0.1);
+        }
+      }
+
+      button{
+        width: 100px;
+        margin: 0;
+        background-color: $main-purple;
+        color: white;
+        border-radius: 12px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .comments-list {
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    background: $white;
+    color: $text-dark;
+    padding: 14px 16px;
+    margin: 10px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba($main-purple, 0.08);
+  }
+}
