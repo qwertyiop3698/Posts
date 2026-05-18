@@ -6,10 +6,6 @@ React와 PHP로 구현한 회원 기반 자유 게시판입니다. 게시글 작
 
 https://toma2025.dothome.co.kr/posts/
 
-## 화면 미리보기
-
-> 아래 이미지는 `docs/images/` 폴더에 같은 파일명으로 저장하면 GitHub README에서 바로 확인할 수 있습니다.
-
 ### 게시글 목록
 
 ![게시글 목록 화면](docs/images/post-list.png)
@@ -132,11 +128,11 @@ comments.user_id
 
 ## 테스트 계정
 
-테스트는 회원가입 화면에서 직접 계정을 생성한 뒤 진행할 수 있습니다.
+아래 계정으로 로그인해서 게시글 작성, 댓글 작성, 수정/삭제 기능을 테스트할 수 있습니다.
 
 ```text
-아이디: testuser
-비밀번호: test1234
+아이디: demo01
+비밀번호: demo01
 ```
 
 ## 구현 포인트
