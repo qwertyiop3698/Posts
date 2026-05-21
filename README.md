@@ -8,19 +8,19 @@ https://toma2025.dothome.co.kr/posts/
 
 ### 게시글 목록
 
-![게시글 목록 화면](docs/images/post-list.png)
+<img src="docs/images/post-list.png" alt="게시글 목록 화면" width="720" style="border: 1px solid #d0d7de; border-radius: 6px;">
 
 로그인한 사용자의 이름과 로그아웃 버튼을 보여주며, 게시글 제목과 조회수를 목록 형태로 확인할 수 있습니다.
 
 ### 글쓰기
 
-![글쓰기 화면](docs/images/post-write.png)
+<img src="docs/images/post-write.png" alt="글쓰기 화면" width="720" style="border: 1px solid #d0d7de; border-radius: 6px;">
 
 제목, 내용, 이미지 파일을 입력해 새 게시글을 등록할 수 있습니다.
 
 ### 게시글 상세 및 댓글
 
-![게시글 상세 및 댓글 화면](docs/images/post-detail-comments.png)
+<img src="docs/images/post-detail-comments.png" alt="게시글 상세 및 댓글 화면" width="720" style="border: 1px solid #d0d7de; border-radius: 6px;">
 
 게시글 상세 내용, 작성자, 작성일, 조회수, 댓글 목록을 확인할 수 있으며 작성자 본인에게만 수정/삭제 버튼이 노출됩니다.
 
